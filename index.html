@@ -1,369 +1,351 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
   <head>
-    <title>Nikhil Oke</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Nikhil Oke, Software Engineer experienced in full stack web development across various tech stacks"
+      content="Nikhil Oke — Software Engineer II at PayPal. Backend engineer specializing in distributed systems and event-driven architectures serving millions of users."
     />
-    <link rel="stylesheet" href="portfolio.css" />
+    <title>Nikhil Oke</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
     />
+    <link rel="stylesheet" href="portfolio.css" />
   </head>
   <body>
-    <div class="navigation-bar">
-      <a class="nav-logo" href="#landing">Nikhil Oke</a>
-      <div class="nav-links">
-        <a class="nav-tab" href="#experience">Experiences</a>
-        <a class="nav-tab" href="#projects">Projects</a>
-        <a class="nav-tab" href="#skills">Skills</a>
-        <a class="nav-tab" href="#about">About</a>
-        <a
-          class="nav-tab"
-          href="./assets/Nikhil_Oke_Resume.pdf"
-          download="Nikhil_Oke_Resume.pdf"
-          >Resume</a
-        >
+    <!-- ─── Navbar ──────────────────────────────────────────────────────── -->
+    <nav class="navbar" id="navbar">
+      <div class="container nav-inner">
+        <a class="nav-logo" href="#hero">Nikhil Oke</a>
+        <div class="nav-links" id="nav-links">
+          <a class="nav-link" href="#experience">Experience</a>
+          <a class="nav-link" href="#projects">Projects</a>
+          <a class="nav-link" href="#skills">Skills</a>
+          <a class="nav-link" href="#education">Education</a>
+          <a class="nav-link" href="#about">About</a>
+          <a
+            class="nav-link nav-resume"
+            href="./assets/Nikhil_Oke_Resume.pdf"
+            download="Nikhil_Oke_Resume.pdf"
+            >Resume</a
+          >
+          <button class="dark-toggle" id="dark-toggle" aria-label="Toggle dark mode">
+            <i class="fas fa-moon" id="theme-icon"></i>
+          </button>
+        </div>
+        <button class="hamburger" id="hamburger" aria-label="Open navigation menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
       </div>
-    </div>
-    <section class="landing" id="landing">
-      <div class="landing-pane">
-        <div class="intro">
-          <h1>
-            Hello! 👋 and Namaste 🙏 <br />
-            I'm Nikhil Oke
-          </h1>
-          <p>
-            A passionate <strong>Software Engineer</strong> who thrives on
-            solving complex problems with clean and efficient code. From
-            building scalable backend systems to crafting intuitive user
-            experiences, I love every bit of it! With over 2 years of hands-on
-            experience, I'm on a journey to create impactful solutions in the
-            tech world.
-          </p>
-          <p>
-            When I’m not coding, you’ll find me exploring new technologies,
-            contributing to open-source, or refining my latest side project.
-            Welcome to my portfolio – let’s dive into some code!
-          </p>
+    </nav>
 
-          <button class="explore">Let's Explore</button>
-        </div>
-        <img class="img" src="./assets/portfolio_img.jpg" />
-      </div>
-    </section>
-    <section class="experience" id="experience">
-      <p class="sec-heading">
-        Let's talk about
-        <span class="head-color"> <strong>Work</strong>!!</span>
-      </p>
-      <div class="experience-flex">
-        <div class="exp-tabs" id="exp-tabs">
-          <button class="exp-tab" onClick="showCompany(0)" id="sel-button">
-            Select Health
-          </button>
-          <button class="exp-tab" onClick="showCompany(1)" id="bing-button">
-            Binghamton University
-          </button>
-          <button class="exp-tab" onClick="showCompany(2)" id="weag-button">
-            WeAgile Software Solutions
-          </button>
-          <button class="exp-tab" onClick="showCompany(3)" id="acc-button">
-            Accenture
-          </button>
-        </div>
-        <div class="show-exp .active" id="show-exp">
-          <div class="exp">
-            <div>
-              <div class="comp-name" id="compName"></div>
-              <div class="position" id="pos"></div>
-            </div>
-            <div class="info">
-              <div>
-                <i
-                  class="fas fa-map-marker-alt"
-                  style="color: var(--hover-color); margin-right: 2%"
-                ></i>
-                <span class="location" id="location"></span>
-              </div>
-              <div class="duration" id="date"></div>
-            </div>
+    <!-- ─── Hero ────────────────────────────────────────────────────────── -->
+    <section class="section hero" id="hero">
+      <div class="container hero-inner">
+        <div class="hero-text">
+          <p class="hero-greeting">Hi, I'm</p>
+          <h1 class="hero-name">Nikhil Oke</h1>
+          <p class="hero-title">Software Engineer II &middot; PayPal</p>
+          <p class="hero-location">
+            <i class="fas fa-map-marker-alt"></i> New York, NY
+          </p>
+          <p class="hero-bio">
+            Backend engineer specializing in distributed systems and
+            event-driven architectures. I build scalable microservices that
+            serve millions of users &mdash; currently at PayPal working on
+            Loyalty and Ads platforms.
+          </p>
+          <div class="hero-ctas">
+            <a
+              class="btn btn-primary"
+              href="./assets/Nikhil_Oke_Resume.pdf"
+              download="Nikhil_Oke_Resume.pdf"
+              >Download Resume</a
+            >
+            <a class="btn btn-outline" href="#about">Get in Touch</a>
           </div>
-          <p class="desc" id="desc"></p>
+        </div>
+        <div class="hero-photo">
+          <img
+            src="./assets/portfolio_img.jpg"
+            alt="Nikhil Oke"
+            class="hero-img"
+          />
         </div>
       </div>
     </section>
-    <section class="projects" id="projects">
-      <div
-        class="sec-heading"
-        style="color: var(--hover-color); text-align: center"
-      >
-        <strong>Projects</strong>
-      </div>
-      <div class="grid-container" id="grid-container">
-        <div class="grid-item">
-          <img src="./assets/tic-tac-toe.svg" class="prj-img" />
-          <div class="prj-info">
-            <div class="prj-title">Tic Tac Toe</div>
-            <div class="prj-desc">
-              An online web app where users can play Tic Tac Toe remotely.
-            </div>
+
+    <!-- ─── Experience ───────────────────────────────────────────────────── -->
+    <section class="section section-alt" id="experience">
+      <div class="container">
+        <h2 class="section-title">Experience</h2>
+        <div class="exp-wrapper">
+          <div class="exp-tabs" id="exp-tabs">
+            <button class="exp-tab active" onclick="showCompany(0)">PayPal</button>
+            <button class="exp-tab" onclick="showCompany(1)">Idea Nova</button>
+            <button class="exp-tab" onclick="showCompany(2)">Select Health</button>
+            <button class="exp-tab" onclick="showCompany(3)">Binghamton</button>
+            <button class="exp-tab" onclick="showCompany(4)">WeAgile</button>
+            <button class="exp-tab" onclick="showCompany(5)">Accenture</button>
           </div>
-        </div>
-        <div class="grid-item">
-          <img src="./assets/chat.svg" class="prj-img" />
-          <div class="prj-info">
-            <div class="prj-title">Chat App</div>
-            <div class="prj-desc">
-              An online web app where users communicate with friends or group of
-              friends.
-            </div>
-          </div>
-        </div>
-        <div class="grid-item">
-          <img src="./assets/job-search-svgrepo-com.svg" class="prj-img" />
-          <div class="prj-info">
-            <div class="prj-title">Job Track Application</div>
-            <div class="prj-desc">
-              A web app where users can track their job applications, followups
-              and linkedin referrals.
-            </div>
-          </div>
-        </div>
-        <div class="grid-item">
-          <img src="./assets/web-page-svgrepo-com.svg" class="prj-img" />
-          <div class="prj-info">
-            <div class="prj-title">Portfolio Website</div>
-            <div class="prj-desc">A personal website to showcase who am I.</div>
-          </div>
-        </div>
-        <div class="grid-item">
-          <img src="./assets/whiteboard-svgrepo-com.svg" class="prj-img" />
-          <div class="prj-info">
-            <div class="prj-title">White Board App</div>
-            <div class="prj-desc">
-              An application where multiple users could share a room and discuss
-              on a whiteboard.
-            </div>
-          </div>
-        </div>
-        <div class="grid-item">
-          <img src="./assets/kanban-board-svgrepo-com.svg" class="prj-img" />
-          <div class="prj-info">
-            <div class="prj-title">Kanban Board</div>
-            <div class="prj-desc">
-              An application where user could track their day to day tasks and
-              move them to the next stages.
-            </div>
+          <div class="exp-content" id="exp-content">
+            <!-- Populated by portfolio.js -->
           </div>
         </div>
       </div>
     </section>
-    <section class="skills" id="skills">
-      <p class="sec-heading">
-        Skills in
-        <span class="head-color"> <strong>Action</strong>!!</span>
-      </p>
-      <p class="skills-description">
-        Crafting scalable solutions is my passion. Over the years, I've mastered
-        a blend of frontend and backend technologies that enable me to build
-        full-stack applications. From structuring efficient databases to
-        creating pixel-perfect interfaces, I take pride in using the right tools
-        for the job. Here are some of the technologies I work with:
-      </p>
-      <div class="skills-grid">
-        <img
-          src="./assets//skills/react-javascript-js-framework-facebook-svgrepo-com.svg"
-          height="80%"
-          width="80%"
-        />
-        <img
-          src="./assets//skills/angular-svgrepo-com.svg"
-          height="80%"
-          width="80%"
-        />
-        <img
-          src="./assets//skills/aws-svgrepo-com.svg"
-          height="80%"
-          width="80%"
-        />
-        <img
-          src="./assets//skills/c-sharp-svgrepo-com.svg"
-          height="80%"
-          width="80%"
-        />
-        <img
-          src="./assets//skills/docker-svgrepo-com.svg"
-          height="80%"
-          width="80%"
-        />
-        <img
-          src="./assets//skills/dotnet-svgrepo-com.svg"
-          height="80%"
-          width="80%"
-        />
-        <img
-          src="./assets//skills/java-svgrepo-com.svg"
-          height="80%"
-          width="80%"
-        />
-        <img
-          src="./assets//skills/javascript-svgrepo-com.svg"
-          height="80%"
-          width="80%"
-        />
-        <img
-          src="./assets//skills/kubernetes-svgrepo-com.svg"
-          height="80%"
-          width="80%"
-        />
-        <img
-          src="./assets//skills/material-ui-svgrepo-com.svg"
-          height="80%"
-          width="80%"
-        />
-        <img
-          src="./assets//skills/mongodb-svgrepo-com.svg"
-          height="80%"
-          width="80%"
-        />
-        <img
-          src="./assets//skills/node-js-svgrepo-com.svg"
-          height="80%"
-          width="80%"
-        />
-        <img
-          src="./assets//skills/redux-svgrepo-com.svg"
-          height="80%"
-          width="80%"
-        />
-        <img
-          src="./assets//skills/sql-database-sql-azure-svgrepo-com.svg"
-          height="80%"
-          width="80%"
-        />
-        <img
-          src="./assets//skills/typescript-svgrepo-com.svg"
-          height="80%"
-          width="80%"
-        />
-        <img
-          src="./assets//skills/spring-boot-svgrepo-com.svg"
-          height="80%"
-          width="80%"
-        />
-        <img
-          src="./assets//skills/python-svgrepo-com.svg"
-          height="80%"
-          width="80%"
-        />
-        <img
-          src="./assets//skills/graphql-svgrepo-com.svg"
-          height="80%"
-          width="80%"
-        />
-        <img
-          src="./assets//skills/html-5-svgrepo-com.svg"
-          height="80%"
-          width="80%"
-        />
-        <img
-          src="./assets//skills/css-svgrepo-com.svg"
-          height="80%"
-          width="80%"
-        />
-        <img
-          src="./assets//skills/tailwindcss-icon-svgrepo-com.svg"
-          height="80%"
-          width="80%"
-        />
+
+    <!-- ─── Projects ────────────────────────────────────────────────────── -->
+    <section class="section" id="projects">
+      <div class="container">
+        <h2 class="section-title">Projects</h2>
+        <div class="projects-grid">
+
+          <div class="project-card">
+            <div class="project-header">
+              <h3 class="project-title">Job Tracker</h3>
+              <a
+                href="https://github.com/NikhilRajivOke"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="GitHub"
+              ><i class="fab fa-github"></i></a>
+            </div>
+            <p class="project-desc">
+              Track job applications, LinkedIn referrals, and follow-up
+              reminders in one place.
+            </p>
+            <div class="tech-pills">
+              <span class="tech-pill">React JS</span>
+              <span class="tech-pill">Node JS</span>
+              <span class="tech-pill">Express JS</span>
+              <span class="tech-pill">MongoDB</span>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <div class="project-header">
+              <h3 class="project-title">Chat Application</h3>
+              <a
+                href="https://github.com/NikhilRajivOke"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="GitHub"
+              ><i class="fab fa-github"></i></a>
+            </div>
+            <p class="project-desc">
+              Real-time chat app deployed with Kubernetes on GCP.
+            </p>
+            <div class="tech-pills">
+              <span class="tech-pill">Angular</span>
+              <span class="tech-pill">Python</span>
+              <span class="tech-pill">Flask</span>
+              <span class="tech-pill">Docker</span>
+              <span class="tech-pill">Kubernetes</span>
+              <span class="tech-pill">GCP</span>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <div class="project-header">
+              <h3 class="project-title">Tic Tac Toe</h3>
+              <a
+                href="https://github.com/NikhilRajivOke"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="GitHub"
+              ><i class="fab fa-github"></i></a>
+            </div>
+            <p class="project-desc">
+              Multiplayer game with real-time WebSocket communication.
+            </p>
+            <div class="tech-pills">
+              <span class="tech-pill">Angular</span>
+              <span class="tech-pill">Java</span>
+              <span class="tech-pill">Spring Boot</span>
+              <span class="tech-pill">PostgreSQL</span>
+              <span class="tech-pill">WebSockets</span>
+            </div>
+          </div>
+
+        </div>
       </div>
     </section>
-    <section class="life" id="about">
-      <div>
-        <p class="sec-heading">
-          Life Beyond
-          <span class="head-color"> <strong>Work</strong>!!</span>
+
+    <!-- ─── Skills ───────────────────────────────────────────────────────── -->
+    <section class="section section-alt" id="skills">
+      <div class="container">
+        <h2 class="section-title">Skills</h2>
+        <div class="skills-categories">
+
+          <div class="skill-group">
+            <h3 class="skill-group-title">Languages &amp; Frameworks</h3>
+            <div class="skill-items">
+              <span class="skill-badge">Java</span>
+              <span class="skill-badge">TypeScript</span>
+              <span class="skill-badge">Spring Boot</span>
+              <span class="skill-badge">Spring Batch</span>
+              <span class="skill-badge">GraphQL</span>
+              <span class="skill-badge">Kafka</span>
+              <span class="skill-badge">RabbitMQ</span>
+            </div>
+          </div>
+
+          <div class="skill-group">
+            <h3 class="skill-group-title">Databases &amp; Cloud</h3>
+            <div class="skill-items">
+              <span class="skill-badge">MySQL</span>
+              <span class="skill-badge">MongoDB</span>
+              <span class="skill-badge">PostgreSQL</span>
+              <span class="skill-badge">Oracle</span>
+              <span class="skill-badge">AWS RDS</span>
+              <span class="skill-badge">AWS S3</span>
+              <span class="skill-badge">AWS API Gateway</span>
+            </div>
+          </div>
+
+          <div class="skill-group">
+            <h3 class="skill-group-title">DevOps &amp; Tools</h3>
+            <div class="skill-items">
+              <span class="skill-badge">Docker</span>
+              <span class="skill-badge">Kubernetes</span>
+              <span class="skill-badge">Git</span>
+              <span class="skill-badge">GitHub Actions</span>
+              <span class="skill-badge">Jenkins</span>
+              <span class="skill-badge">Postman</span>
+            </div>
+          </div>
+
+          <div class="skill-group">
+            <h3 class="skill-group-title">Testing &amp; Monitoring</h3>
+            <div class="skill-items">
+              <span class="skill-badge">JUnit</span>
+              <span class="skill-badge">Mockito</span>
+              <span class="skill-badge">Jest</span>
+              <span class="skill-badge">Playwright</span>
+              <span class="skill-badge">Prometheus</span>
+              <span class="skill-badge">Grafana</span>
+              <span class="skill-badge">Datadog</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── Education ────────────────────────────────────────────────────── -->
+    <section class="section" id="education">
+      <div class="container">
+        <h2 class="section-title">Education</h2>
+        <div class="education-list">
+
+          <div class="edu-card">
+            <h3 class="edu-degree">M.S. Computer Science</h3>
+            <p class="edu-school">SUNY Binghamton University</p>
+            <p class="edu-details">Aug 2022 &ndash; May 2024 &nbsp;&middot;&nbsp; GPA: 3.85 / 4.00</p>
+          </div>
+
+          <div class="edu-card">
+            <h3 class="edu-degree">B.S. Computer Engineering</h3>
+            <p class="edu-school">Savitribai Phule Pune University</p>
+            <p class="edu-details">GPA: 3.30 / 4.00</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── About / Contact ──────────────────────────────────────────────── -->
+    <section class="section section-alt" id="about">
+      <div class="container">
+        <h2 class="section-title">About &amp; Contact</h2>
+        <div class="about-inner">
+          <div class="about-text">
+            <p class="about-bio">
+              I'm always up for a new adventure &mdash; whether it's hiking a
+              trail, cooking up a storm, or diving into a side project. Having
+              moved from India to the US, I've learned to embrace change and
+              enjoy the ride. When I'm not building things, you'll find me at
+              hackathons or exploring new technologies.
+            </p>
+            <p class="about-bio" style="margin-top: 16px">
+              I'm open to backend engineering opportunities and technical
+              conversations. Feel free to reach out.
+            </p>
+            <div class="socials">
+              <a
+                href="https://www.linkedin.com/in/nikhil-oke/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="LinkedIn"
+              ><i class="fab fa-linkedin"></i></a>
+              <a
+                href="https://github.com/NikhilRajivOke"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="GitHub"
+              ><i class="fab fa-github"></i></a>
+              <a
+                href="https://leetcode.com/u/NikhilOke/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="LeetCode"
+              ><img
+                  src="./assets/socials/leetcode-svgrepo-com.svg"
+                  alt="LeetCode"
+                  class="social-img"
+                /></a>
+              <a
+                href="https://www.instagram.com/_monuu_1997/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Instagram"
+              ><i class="fab fa-instagram"></i></a>
+            </div>
+          </div>
+          <div class="about-cta">
+            <div class="coffee-card">
+              <p class="coffee-text">
+                Want to grab a virtual coffee and chat about backend
+                engineering or new opportunities?
+              </p>
+              <button
+                class="btn btn-primary"
+                onclick="window.open('https://calendly.com/nikhiloke97/meeting-with-nikhil', '_blank')"
+              >
+                Schedule a Coffee Chat
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── Footer ───────────────────────────────────────────────────────── -->
+    <footer class="footer">
+      <div class="container footer-inner">
+        <p>
+          Built by Nikhil Oke &nbsp;&middot;&nbsp;
+          <a
+            href="https://github.com/NikhilRajivOke"
+            target="_blank"
+            rel="noopener noreferrer"
+            >GitHub</a
+          >
         </p>
       </div>
-      <div class="about-sec">
-        <div class="about">
-          <div class="about-desc">
-            <span style="font-size: 2vw; color: var(--hover-color)"
-              ><strong>I</strong></span
-            >’m always up for a new adventure-whether it’s hiking a new trail,
-            cooking up a storm, or diving into a gaming session. Having moved
-            from India to the US, I’ve learned to embrace change and enjoy the
-            ride. When I’m not gaming or experimenting in the kitchen, you’ll
-            find me pushing my limits at hackathons. Hit me up over a coffee by
-            submitting the form on the right, or connect with me on socials!
-          </div>
-          <div class="socials">
-            <img
-              src="./assets/socials/linkedin-svgrepo-com.svg"
-              height="50%"
-              width="50%"
-              onClick="openTab('https://www.linkedin.com/in/nikhil-oke/')"
-            />
-            <img
-              src="./assets/socials/github-142-svgrepo-com.svg"
-              height="50%"
-              width="50%"
-              onclick="openTab('https://github.com/NikhilRajivOke')"
-            />
-            <img
-              src="./assets/socials/instagram-color-svgrepo-com.svg"
-              height="50%"
-              width="50%"
-              onClick="openTab('https://www.instagram.com/_monuu_1997/')"
-            />
-            <img
-              src="./assets/socials/leetcode-svgrepo-com.svg"
-              height="50%"
-              width="50%"
-              onclick="openTab('https://leetcode.com/u/NikhilOke/')"
-            />
-          </div>
-        </div>
-        <div class="coffee-form">
-          <img
-            src="./assets/coffee-to-go-svgrepo-com.svg"
-            height="50%"
-            width="50%"
-          />
-          <button
-            class="book-coffee"
-            onClick="openTab('https://calendly.com/nikhiloke97/meeting-with-nikhil')"
-          >
-            Schedule a Coffee meet !!
-          </button>
-        </div>
-      </div>
-    </section>
-    <script src="portfolio.js"></script>
-    <script>
-      window.onload = function () {
-        document.getElementById("sel-button").click();
-        document.getElementById("sel-button").focus();
-        window.scrollTo(0, 0);
-      };
+    </footer>
 
-      document.addEventListener("DOMContentLoaded", function () {
-        const observer = new IntersectionObserver((entries) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              entry.target.classList.add("active");
-            }
-          });
-        });
-        const experienceTabs = document.getElementById("exp-tabs");
-        observer.observe(experienceTabs);
-        observer.observe(document.getElementById("show-exp"));
-        observer.observe(document.getElementById("grid-container"));
-      });
-    </script>
+    <script src="portfolio.js"></script>
   </body>
 </html>
